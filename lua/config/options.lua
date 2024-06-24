@@ -10,7 +10,9 @@ g.mapleader = ","
 g.localleader = "\\"
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
-
+if vim.loop.os_uname().sysname == "Darwin" then
+  g.python3_host_prog = "/Users/danilo.pereira/.nvim-env/bin/python"
+end
 opt.langmenu = "en_US"
 -- UI config
 opt.number = true -- show absolute number
