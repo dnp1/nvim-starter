@@ -12,6 +12,8 @@ g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 if vim.loop.os_uname().sysname == "Darwin" then
   g.python3_host_prog = "/Users/danilo.pereira/.nvim-env/bin/python"
+else
+  g.python3_host_prog = "~/.nvim-env/bin/python"
 end
 opt.langmenu = "en_US"
 -- UI config
@@ -28,3 +30,7 @@ opt.incsearch = true -- search as characters are entered
 opt.hlsearch = false -- do not highlight matches
 opt.ignorecase = true -- ignore case in searches by default
 opt.smartcase = true
+
+opt.title = true
+opt.titlelen = 0 -- do not shorten title
+opt.titlestring = 'nvim %{expand("%:p")}'
