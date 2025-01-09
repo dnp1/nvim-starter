@@ -17,7 +17,8 @@ map(vn, "<Down>", "", opts)
 map(vn, "<Left>", "", opts)
 map(vn, "<Right>", "", opts)
 
-local tlbt = require("telescope.builtin")
+-- local tlbt = require("telescope.builtin")
+local fzf_lua = require("fzf-lua")
 local vn = { "v", "n" }
 -- map('n', '<leader>ff', tlbt.find_files, {})
 -- map('n', '<leader>fg', tlbt.live_grep, {})
@@ -25,6 +26,6 @@ local vn = { "v", "n" }
 -- map(vn, '<leader>fh', tlbt.help_tags, {})
 -- map(vn, '<leader>fc', tlbt.commands, {})
 -- map(vn, '<leader>fn', tlbt.treesitter, {}) -- find symbols??
-map(vn, "<leader>fu", tlbt.lsp_references, {})
+map(vn, "<leader>fu", fzf_lua.lsp_references, {})
 -- map(vn, '<leader>ds', tlbt.lsp_document_symbols, {})
-map(vn, "<leader>fw", tlbt.lsp_workspace_symbols, {})
+map(vn, "<leader>fw", fzf_lua.lsp_workspace_symbols, {})
